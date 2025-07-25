@@ -4,11 +4,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PH-B12-A02 New</title>
+  <title>PH-B12-A02</title>
+</head>
+<style>
+  /* Navbar Base Styles */
+  :root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #f9fafb;
+  }
+
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  /* Logo Styles */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .Shop {
+    color: #8987A1;
+  }
+
+  .About {
+    color: #8987A1;
+  }
+
+
+  /* Desktop Navigation */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Cart Styles */
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background-color: #f3f4f6;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+
+  .cart:hover {
+    background-color: #e5e7eb;
+    color: var(--primary-color);
+  }
+
+  .cart-icon {
+    font-size: 1.1rem;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.75rem 1.5rem;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .cart span {
+      display: none;
+    }
+
+    .cart {
+      padding: 0.5rem;
+      background-color: transparent;
+    }
+
+    .cart:hover {
+      background-color: #f3f4f6;
+    }
+  }
+
+  /* Banner Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Banner Container */
+  .banner {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    gap: 50px;
+
+
+  }
+
+  /* Content Section */
+  .banner-content {
+    flex: 1;
+
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .fresh {
+    color: #E95A08;
+  }
+
+  .FLOWERS {
+    color: #E95A08;
+  }
+
+  .banner-text {
+    font-size: 1.1rem;
+    color: #495057;
+    line-height: 1.6;
+    max-width: 500px;
+
+
+  }
+
+  /* Image Section */
+  .banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .banner-image img {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 8px; */
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .banner-image {
+      order: -1;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .banner-content {
+      width: 100%;
+    }
+
+    .banner-title {
+      font-size: 2rem;
+    }
+
+    .banner-text {
+      max-width: 100%;
+    }
+  }
+</style>
+<!-- Using Heroicons via CDN for cart icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <nav class="navbar">
+    <!-- Logo/Website Name -->
+    <a href="#" class="logo">
+      <img src="B12A02-Responsive-Flowers/assets/logo.png" alt="Logo">
+      <!-- <span>Falgun</span> -->
+    </a>
 
+    <!-- Desktop Navigation -->
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About us</a></li>
+      </ul>
+
+      <!-- Cart -->
+      <a href="#" class="cart">
+        <i class="fas fa-shopping-cart cart-icon"></i>
+        <span>Cart</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+    <div class="banner">
+      <div class="banner-content">
+        <h1 class="banner-title">ALWAYS <span class="fresh">FRESH</span> <br> <span class="FLOWERS">FLOWERS</span></h1>
+        <p class="banner-text">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
+          roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. </p>
+      </div>
+
+      <div class="banner-image">
+        <img src="B12A02-Responsive-Flowers/assets/hero-flower.png" alt="Banner Image">
+      </div>
+    </div>
 </body>
 
 </html>
