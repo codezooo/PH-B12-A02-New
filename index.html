@@ -369,6 +369,151 @@
       height: auto;
     }
   }
+
+  /* Plants Lover Section Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #ffffff;
+  }
+
+  /* Section Container */
+  .plants-lover-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    display: flex;
+    /* align-items: center; */
+    gap: 60px;
+
+  }
+
+  /* Image Section */
+  .plants-image {
+    flex: 1;
+    position: relative;
+  }
+
+  .plants-image img {
+    /* width: 100%; */
+    /* height: auto; */
+    /* border-radius: 12px; */
+    /* object-fit: cover; */
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  }
+
+  .plants-ima {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Trusted Badge */
+  .trusted-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    /* Adjust based on your badge size */
+    height: auto;
+    transform: translate(45%, -45%);
+    /* Slightly overlaps the corner */
+    z-index: 2;
+  }
+
+
+
+  /* Content Section */
+  .plants-content {
+    flex: 1;
+  }
+
+  .plants-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    /* margin-bottom: 25px; */
+    line-height: 1.2;
+    margin-top: 70px;
+    padding: 15px;
+  }
+
+
+
+  .plants-features {
+    /* list-style-type: none; */
+    padding: 40px;
+  }
+
+  .plants-features li {
+    /* position: relative; */
+    /* padding-left: 30px; */
+    margin-bottom: 40px;
+    color: #444444;
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+  }
+
+  /* .plants-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 16px;
+    height: 2px;
+    background-color: #4CAF50;
+  } */
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .plants-lover-section {
+      flex-direction: column;
+      /* padding: 50px 20px; */
+      /* gap: 40px; */
+      gap: 0%;
+      justify-items: left;
+
+    }
+
+    .plants-image {
+      order: -1;
+      width: 100%;
+    }
+
+    .trusted-badge {
+      display: none;
+      /* Hide badge on mobile */
+    }
+
+    .plants-title {
+      font-size: 2rem;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      justify-content: left;
+      gap: 0%;
+
+
+    }
+
+    .plants-title br {
+      display: none;
+    }
+
+    .plants-description {
+      font-size: 1rem;
+    }
+
+    .plants-features li {
+      font-size: 1rem;
+      /* padding-left: 25px; */
+
+    }
+  }
 </style>
 <!-- Using Heroicons via CDN for cart icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -499,6 +644,26 @@
             <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="plants-lover-section">
+      <div class="plants-image">
+        <img src="B12A02-Responsive-Flowers/assets/flower-store.png" class="plants-ima">
+        <!-- Trusted badge as image -->
+        <img src="B12A02-Responsive-Flowers/assets/trusted-badge.png" class="trusted-badge">
+      </div>
+
+      <div class="plants-content">
+        <!-- <p class="plants-subtitle"></p> -->
+        <h2 class="plants-title">Flower & Plants <br>Lover</h2>
+        <ul class="plants-features">
+          <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic
+            blooms, we offer a wide variety of fresh.</li>
+          <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic
+            blooms, we offer a wide variety of fresh.</li>
+          <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic
+            blooms, we offer a wide variety of fresh.</li>
+        </ul>
       </div>
     </section>
 
